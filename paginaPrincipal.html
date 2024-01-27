@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimavez Solution</title>
+    <link href="/css/estilos.css" rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <ul>
+        <li><a href="#" class="fa-solid fa-house"></a></li>
+        <li><a href="#" class="fa-regular fa-address-book"></a></li>
+        <li><a href="#" class="fa-solid fa-map-pin"></a></li>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around" ><a href="#" class="fa-brands fa-facebook"></a></li>
+    </ul>
+    <div class="carrousel">
+        <div class="conteCarrousel">
+            <div class="itemCarrousel" id="itemCarrousel-1">
+                <div class="itemCarrouselTarjeta">
+                    <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-2">
+                <div class="itemCarrouselTarjeta">
+                    <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-3">
+                <div class="itemCarrouselTarjeta">
+                    <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
+                </div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="conteCarrouselController">
+            <a href="#itemCarrousel-1">•</a>
+            <a href="#itemCarrousel-2">•</a>
+            <a href="#itemCarrousel-3">•</a>
+        </div>
+    </div>
+    <script>
+        function cambiarImagen(nuevaImagen) {
+          document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
+        }
+    
+        function cambiarAutomaticamente() {
+          const imagenes = ['baño.jpg', 'casa.jpg', 'establecimiento.jpg'];
+          let indice = 0;
+    
+          setInterval(function() {
+            cambiarImagen(imagenes[indice]);
+            indice = (indice + 1) % imagenes.length;
+          }, 2500);
+        }
+        window.onload = cambiarAutomaticamente;
+      </script>
+</body>
+</html>

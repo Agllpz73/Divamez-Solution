@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+ul{
+    list-style-type: none;
+    background-color: #c58b93;
+    overflow: hidden;
+    margin: 0;
+    padding: 1;
+}
+li{
+    float: left;
+    
+}
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-family: Yu Gothic;
+}
+li a:hover{
+    background-color: #c06c77;
+}
+
+.carrousel{
+    margin: auto;
+    text-align: center;
+    width: 1280px;
+    height: auto;
+    /*margin: 50px auto 0;*/
+    /*position: relative;*/
+    
+}
+
+.conteCarrousel{
+    width: 50%;
+    height: 700px;
+    margin: auto;
+    padding: auto;
+    overflow: hidden;
+    animation: slide 20s infinite alternate;
+    margin: auto;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+}
+
+#itemCarrousel-1 img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    
+}
+
+#itemCarrousel-2{
+    width: 100%;
+    height: 100%;
+}
+
+
+#itemCarrousel-3{
+    width: 100%;
+    height: 100%;
+
+}
+
+.conteCarrouselController{
+    width: 50%;
+    display: flex;
+    margin:auto;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: white;
+}
+
