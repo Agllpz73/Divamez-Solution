@@ -38,14 +38,20 @@ li a:hover {
 
 #QuienesSomos {
     font-family: Arial, sans-serif; /*Cambiemos las fuentes por lo que necesitamos*/
-    font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
-    color: #000; /* Cambia el color del texto según tus preferencias */
-    text-align: center; /* Centra el texto en el contenedor */
-    line-height: 1.5; /* Ajusta la altura de línea según sea necesario */
-    margin: 20px 0; /* Ajusta el margen superior e inferior según sea necesario */
+    font-size: 24px; 
+    color: #000;
+    text-align: center; 
+    line-height: 1.5;
+    margin: 20px 0;
 }
 
 #logotipo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logotipo2 {
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -25,7 +25,7 @@
             <div class="itemCarrousel" id="itemCarrousel-1">
                 <div class="itemCarrouselTarjeta">
                     <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
-                    <p class="parrafoCarrousel">Párrafo 1</p> <!-- Nuevo párrafo -->
+                    <p class="parrafoCarrousel">Párrafo 1 aquí podrías poner la misión</p> <!-- Nuevo párrafo -->
                 </div>
                 <div class="itemCarrouselArrows">
                     <a href="#itemCarrousel-3">
@@ -39,7 +39,7 @@
             <div class="itemCarrousel" id="itemCarrousel-2">
                 <div class="itemCarrouselTarjeta">
                     <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
-                    <p class="parrafoCarrousel">Párrafo 2</p> <!-- Nuevo párrafo -->
+                    <p class="parrafoCarrousel">Párrafo 2 aquí podrías poner la visión</p> <!-- Nuevo párrafo -->
                 </div>
                 <div class="itemCarrouselArrows">
                     <a href="#itemCarrousel-1">
@@ -53,7 +53,7 @@
             <div class="itemCarrousel" id="itemCarrousel-3">
                 <div class="itemCarrouselTarjeta">
                     <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
-                    <p class="parrafoCarrousel">Párrafo 3</p> <!-- Nuevo párrafo -->
+                    <p class="parrafoCarrousel">Párrafo 3 Este lo podemos quitar si quieres</p> <!-- Nuevo párrafo -->
                 </div>
                 <div class="itemCarrouselArrows">
                     <a href="#itemCarrousel-2">
@@ -71,6 +71,15 @@
             <a href="#itemCarrousel-3">•</a>
         </div>
     </div>
+    <br>
+    <br>
+    <div class="Logo2">
+        <p style="font-family: Arial, sans-serif;  text-align: center; color:antiquewhite;">Aquí podrías poner Los objetivos</p>
+        <img id="logotipo2" src="imagenes/Logo2.png" alt="" width="30%" height="30%">
+        <h4 style="font-family: Arial, sans-serif;  text-align: center;">Divamez-Solution &reg</h2>
+    </div>
+    <br>
+
     <script>
         function cambiarContenido(nuevoParrafo, nuevaImagen) {
             document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
@@ -89,17 +98,17 @@
             setInterval(function () {
                 cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
                 indice = (indice + 1) % contenidos.length;
-            }, 4000);
+            }, 5000);
         }
         window.onload = cambiarAutomaticamente;
     </script>
     <ul>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around" ><a href="#" class="fa-solid fa-phone"></a></li>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around;"><a href="#" class="fa-brands fa-youtube"></a></li>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around" ><a href="#" class="fa-brands fa-facebook"></a></li>
         
-        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
-        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around" ><a href="#" class="fa-brands fa-facebook"></a></li>
-        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
-        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around" ><a href="#" class="fa-brands fa-facebook"></a></li>
-        </li>
+        <h3 style="font-family: Arial, sans-serif; color:antiquewhite;">Contact us: email@example.com</h3>
     </ul>
 </body>
 </html>
