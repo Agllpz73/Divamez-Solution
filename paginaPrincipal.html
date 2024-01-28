@@ -22,6 +22,7 @@
             <div class="itemCarrousel" id="itemCarrousel-1">
                 <div class="itemCarrouselTarjeta">
                     <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
+                    <p class="parrafoCarrousel">Párrafo 1</p> <!-- Nuevo párrafo -->
                 </div>
                 <div class="itemCarrouselArrows">
                     <a href="#itemCarrousel-3">
@@ -35,6 +36,7 @@
             <div class="itemCarrousel" id="itemCarrousel-2">
                 <div class="itemCarrouselTarjeta">
                     <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
+                    <p class="parrafoCarrousel">Párrafo 2</p> <!-- Nuevo párrafo -->
                 </div>
                 <div class="itemCarrouselArrows">
                     <a href="#itemCarrousel-1">
@@ -48,6 +50,7 @@
             <div class="itemCarrousel" id="itemCarrousel-3">
                 <div class="itemCarrouselTarjeta">
                     <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
+                    <p class="parrafoCarrousel">Párrafo 3</p> <!-- Nuevo párrafo -->
                 </div>
                 <div class="itemCarrouselArrows">
                     <a href="#itemCarrousel-2">
@@ -66,20 +69,31 @@
         </div>
     </div>
     <script>
-        function cambiarImagen(nuevaImagen) {
-          document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
+        function cambiarContenido(nuevoParrafo, nuevaImagen) {
+            document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
+            document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
         }
     
         function cambiarAutomaticamente() {
-          const imagenes = ['baño.jpg', 'casa.jpg', 'establecimiento.jpg'];
-          let indice = 0;
+            const contenidos = [
+                { parrafo: 'Párrafo 1', imagen: 'baño.jpg' },
+                { parrafo: 'Párrafo 2', imagen: 'casa.jpg' },
+                { parrafo: 'Párrafo 3', imagen: 'establecimiento.jpg' }
+            ];
     
-          setInterval(function() {
-            cambiarImagen(imagenes[indice]);
-            indice = (indice + 1) % imagenes.length;
-          }, 2500);
+            let indice = 0;
+    
+            setInterval(function () {
+                cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
+                indice = (indice + 1) % contenidos.length;
+            }, 4000);
         }
         window.onload = cambiarAutomaticamente;
-      </script>
+    </script>
+    <ul>
+        
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
+        <li style="float: right; background: white; border-radius: 50%; justify-content: space-around" ><a href="#" class="fa-brands fa-facebook"></a></li>
+    </ul>
 </body>
 </html>

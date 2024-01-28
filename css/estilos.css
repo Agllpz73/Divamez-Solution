@@ -1,20 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
-ul{
+
+ul {
     list-style-type: none;
     background-color: #c58b93;
     overflow: hidden;
     margin: 0;
     padding: 1;
 }
-li{
+
+li {
     float: left;
-    
 }
-li a{
+
+li a {
     display: block;
     color: black;
     text-align: center;
@@ -22,52 +24,59 @@ li a{
     text-decoration: none;
     font-family: Yu Gothic;
 }
-li a:hover{
+
+li a:hover {
     background-color: #c06c77;
 }
 
-.carrousel{
+.carrousel {
     margin: auto;
     text-align: center;
     width: 1280px;
     height: auto;
-    /*margin: 50px auto 0;*/
-    /*position: relative;*/
-    
 }
 
-.conteCarrousel{
+.conteCarrousel {
     width: 50%;
     height: 700px;
     margin: auto;
-    padding: auto;
     overflow: hidden;
-    animation: slide 20s infinite alternate;
-    margin: auto;
+    position: relative; /* Necesario para que la posición absoluta funcione */
 }
 
-.itemCarrousel{
+.itemCarrousel {
     position: relative;
     width: 100%;
     height: 100%;
     margin: auto;
-
 }
 
-.itemCarrouselTarjeta{
+.itemCarrouselTarjeta {
     width: 100%;
     height: 100%;
     margin: auto;
+    position: relative; /* Asegura que los elementos posicionados se ubiquen con respecto a este contenedor */
 }
 
-.itemCarrouselArrows{
+.parrafoCarrousel {
+    position: absolute;
+    top: 50%; /* Ajusta según sea necesario */
+    left: 50%; /* Ajusta según sea necesario */
+    transform: translate(-50%, -50%);
+    color: white; /* Cambia el color del texto según sea necesario */
+    font-size: 18px; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-weight: bold; /* Ajusta el peso de la fuente según sea necesario */
+    z-index: 2; /* Asegura que el párrafo esté por encima de la imagen */
+}
+
+.itemCarrouselArrows {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     height: 100%;
-    width: 100%; 
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,42 +88,37 @@ li a:hover{
     cursor: pointer;
     display: flex;
     justify-content: center;
-
 }
 
-#itemCarrousel-1 img{
+#itemCarrousel-1 img {
     width: 100%;
     height: 100%;
     margin: auto;
-    
 }
 
-#itemCarrousel-2{
+#itemCarrousel-2 {
     width: 100%;
     height: 100%;
 }
 
-
-#itemCarrousel-3{
+#itemCarrousel-3 {
     width: 100%;
     height: 100%;
-
 }
 
-.conteCarrouselController{
+.conteCarrouselController {
     width: 50%;
     display: flex;
-    margin:auto;
+    margin: auto;
     justify-content: space-evenly;
 }
 
-.conteCarrouselController > a{
+.conteCarrouselController > a {
     text-decoration: none;
     font-size: 2em;
     color: grey;
 }
 
-.itemCarrouselArrows > a > i{
+.itemCarrouselArrows > a > i {
     color: white;
 }
-
