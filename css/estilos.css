@@ -36,6 +36,13 @@ li a:hover {
     height: auto;
 }
 
+#logotipo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .conteCarrousel {
     width: 50%;
     height: 700px;
