@@ -81,14 +81,15 @@ li a:hover {
 }
 
 .parrafoCarrousel {
+    font-family: 'Roboto', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 2; 
+    bottom: 0; 
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .itemCarrouselArrows {
