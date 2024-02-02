@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Dimavez Solution</title>
-   <link href="/css/styles.css" rel='stylesheet'/>
+   <link href="./css/estilos.css" rel='stylesheet'/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
     <h1>Cleaning Service Request</h1>
 
     <!-- Form with vertical alignment -->
-    <form id="contactForm" method="post">
+    <form id="contactForm" action="https://formsubmit.co/780f1fb02a1f0486f3717bd8ae747ab5" method="post">
         <ul style="list-style-type: none; padding: 0;">
             <li>
                 <label for="name">Name:</label>
@@ -58,28 +58,10 @@
             </li>
         </ul>
 
-        <button type="button" onclick="submitForm()">Submit Request</button>
+        <input type="submit"  value="Submit Request">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
+        <input type="hidden" name= "_captcha" value="false">
     </form>
-
-    <script>
-        function submitForm() {
-            const formData = new FormData(document.getElementById('contactForm'));
-
-            // Log form data to the console (replace this with your actual form submission logic)
-            for (const pair of formData.entries()) {
-                console.log(pair[0] + ': ' + pair[1]);
-            }
-
-            // Call your email sending function here (replace this with your actual logic)
-            // sendEmail(formData);
-        }
-
-        document.getElementById('placeType').addEventListener('change', function() {
-            var otherType = document.getElementById('otherType');
-            otherType.style.display = (this.value === 'other') ? 'block' : 'none';
-        });
-    </script>
-    <script type="module" src="js/sendEmail.js"></script>
 
 </body>
 </html>
