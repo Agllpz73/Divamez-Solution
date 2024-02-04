@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimavez Solution</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body >
+    <div class="contenedor">
+        <nav>
+            <ul>
+                
+                <div class="menu">
+                   
+                   <a href="#section2"><img src="imagenes/Sec. 1 - Boton Home.png"  alt=""></a> 
+                    <a href="#"><img src="imagenes/Sec. 1 - Boton telefono 2.png" alt=""></a>
+                    <a href="#section6"></a><img src="imagenes/Sec. 1 - Boton Ubicacion 3.png"  alt="">
+                    <a href="#section4"><img src="imagenes/Sec. 1 - Boton about us 2.png" alt=""></a>
+                    
+                    <p style="font-family: Yu Gothic; font-size: 50px;">DIMAVEZ SOLUTION LLC</p>
+                    <p style="font-family: Yu Gothic; font-size: xx-large;">COMMERCIAL & RESIDENTIAL CLEANING</p>
+                </div>
+                
+               
+            </ul>
+        </nav>
+        <br><br><br><br><br><br><br><br><br> 
+          
+        <div class="segunda" id="section2" >
+            <img src="imagenes/Sec. 1 - Logo Sim 5 - Negro.png" alt="">
+            <p style="margin-left: 5%; font-size: 75px;">DIMAVEZ SOLUTION</p>
+            <p style="font-size: 40px; margin-left: 1%;">COMMERCIAL & RESIDENTIAL CLEANING</p>
+            
+        </div>
+        <br><br><br><br><br><br><br><br>
+    
+        <div class="tercero">
+            <p>SAINT PAUL & MINNEAPOLIS</p>
+            <p>COMMERCIAL RESIDENTIAL</p>
+            <p>CLEANING</p>
+            <p>SUBCONTRACT</p>
+    
+        </div>
+        <br><br><br><br>
+
+        <div class="cuarto" id="section4">
+            <p>SERVICES</p><br>
+            <img src="imagenes/Sec. 4 - Boton Services.png" alt="">
+            <br>
+
+        </div>
+
+        <div class="cuartoIzq" >
+            <p >Cuarta parte </p><br>
+            
+        </div>
+        <div class="quinto">
+            <p>REVIEWS / FAQ'S</p><br>
+            <img src="imagenes/Sec. 5 - Boton Reviews.png" alt=""><br>
+            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;">Our grown in this 2 years...</p><br><br><br>
+            <div class="carrousel" style="margin-top: auto; ">
+                <div class="conteCarrousel">
+                    <div class="itemCarrousel" id="itemCarrousel-1">
+                        <div class="itemCarrouselTarjeta">
+                            <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
+                            <p class="parrafoCarrousel" ></p>
+                        </div>
+                        
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-2">
+                        <div class="itemCarrouselTarjeta">
+                            <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
+                            <p class="parrafoCarrousel"  ></p>
+                        </div>
+                        
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-3">
+                        <div class="itemCarrouselTarjeta">
+                            <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
+                            <p class="parrafoCarrousel"  ></p> <!-- Nuevo párrafo -->
+                        </div>
+                       
+                    </div>
+                </div>
+        
+            </div>
+
+
+            
+        </div>
+        <script>
+            function cambiarContenido(nuevoParrafo, nuevaImagen) {
+                document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
+                document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
+            }
+        
+            function cambiarAutomaticamente() {
+                const parrafo1= ' '
+                const parrafo2 = ' '
+                const parrafo3 = ' '
+                const contenidos = [
+                    { parrafo: parrafo1, imagen: 'baño.jpg' },
+                    { parrafo: parrafo2, imagen: 'casa.jpg' },
+                    { parrafo: parrafo3, imagen: 'establecimiento.jpg' }
+                ];
+        
+                let indice = 0;
+        
+                setInterval(function () {
+                    cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
+                    indice = (indice + 1) % contenidos.length;
+                }, 5000);
+            }
+            window.onload = cambiarAutomaticamente;
+        </script>
+        <br><br><br>
+            <div id="contenedor">
+                <button onclick="abrirVentana()">WRITE A REVIEWS</button>
+            </div>
+        
+            <script>
+                function abrirVentana() {
+                    var nuevaVentana = window.open('https://www.google.com/maps/place/Brooklyn+Center,+Minnesota+55443,+EE.+UU./@45.1231095,-93.3578993,13z/data=!4m6!3m5!1s0x52b33a14cb074d2f:0xfb37e697bceebf3f!8m2!3d45.1243266!4d-93.3337208!16s%2Fm%2F01_y467?entry=ttu', '_blank');
+                    // Puedes agregar opciones adicionales para personalizar la apariencia de la nueva ventana aquí
+                }
+            </script>
+            
+            
+        </div><br><br>
+        <div class="sexta" id="secction6">
+            <p>LOCATIONS</p><br><br>
+
+            
+    </div>
+
+</body>
+</html>

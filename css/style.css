@@ -3,6 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    
+
+}
+body{
+    font-family: Yu Gothic;
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    position: fixed;
 }
 ul {
     list-style-type: none;
@@ -10,60 +20,100 @@ ul {
     overflow: hidden;
     margin: 0;
     padding: 1;
-    margin-top: auto;
+    
 }
 
-li {
-    float: left;
-}
 
-li a {
-    display: block;
+ul p{
+    
     color: black;
-    text-align: center;
-    padding: 15px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    margin-top: auto;
+    margin: 0;
 }
-
-li a:hover {
+img:hover {
     background-color: #c06c77;
 }
 
-.carrousel {
-    margin: auto;
+.menu img{
+    width: 7%; float: right;
+    margin: 1%;
+}
+
+.segunda img{
+    float: left;
+    width: 20%;
+    margin-left: 40px ;
+    background-color: white;
+    
+}
+.segunda p{
+    
     text-align: center;
     
-    height: auto;
-    margin-top: auto;
+}
+.tercero{
+    font-size: 70px;
+    text-align: center;
 }
 
-#QuienesSomos {
-    font-family: Yu Gothic; /*Cambiemos las fuentes por lo que necesitamos*/
-    font-size: 24px; 
-    color: #000;
-    text-align: center; 
-    line-height: 1.5;
-    margin: 20px 0;
-    margin-top: auto;
+.cuarto p{
+    text-align: center;
+    font-size: 65px;
+
+}
+.cuarto img{
+    width: 10%;
+    background-color: white;
+    display: block; margin-left: 45%; margin-right: 50%;
+    
+}
+.cuartoIzq{
+    
+    background-color: #c58b93;
+}
+.cuartoIzq p{
+    font-size: 40px;
 }
 
-#logotipo {
-    display: block ;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
+.quinto{    
+    margin: auto;
+    
 }
 
-#logotipo2 {
+.quinto p{
+    font-size: 60px;
+    text-align: center;
+}
+.quinto img{
+    background-color: white;
+    width: 10%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
+    margin-left: 45%;
+    margin-right: 55%;
+
+}#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%; /* Ajusta la altura según tus necesidades */
 }
-
-
+button {
+    font-family: Yu Gothic;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #c58b93;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #c06c77;
+}
+.sexta{
+    font-size: 60px;
+    text-align: center;
+}
 .conteCarrousel {
     width: 50%;
     height: 700px;
@@ -100,33 +150,15 @@ li a:hover {
     z-index: 2; 
 }
 
-.itemCarrouselArrows {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    margin: auto;
-}
 
-.itemCarrouselArrows > i:hover {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-}
+
 
 #itemCarrousel-1 img {
     width: 100%;
     height: 100%;
     margin: auto;
     background-color: white;
-    opacity: 0.4;
+    opacity: 0.70;
 }
 
 #itemCarrousel-2 {
@@ -157,19 +189,3 @@ li a:hover {
 .itemCarrouselArrows > a > i {
     color: white;
 }
-
-.objetivos1  p{
-    font-family: Yu Gothic;
-    margin: 10px 10px 0px 10px;
-    font-size: larger;
-    margin-top: auto;
-}
-
-.objetivos2 p{
-    font-family: Yu Gothic;
-    font-size: large;
-    margin: 0px 0px 0px 30px;
-    margin-top: auto;
-}
-
-
