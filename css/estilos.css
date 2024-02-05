@@ -229,3 +229,7 @@ nav {
 .logo-nav {
     display: none; /* Oculta el contenedor de la imagen real */
 }
+
+.formulary{
+ background-color: white;
+}
