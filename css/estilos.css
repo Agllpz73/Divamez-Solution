@@ -202,24 +202,30 @@ li a:hover {
     flex-direction: column;
 }
 
-.parallax-container {
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
- }
-
- .parallax-image {
+.image-container {
+    background-color: white;
     display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
  }
 
- .parallax-image img {
+ .image-container img {
+    background-color: white;
     width: 25%;
     height: auto;
-    transform-origin: center top;
-    transition: transform 0.5s ease;
+    margin-right: 15px;
  }
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../imagenes/Logo1.png") no-repeat center center;
+    background-size: contain;
+    height: 150px; 
+    background-color: #333;
+}
+
+.logo-nav {
+    display: none; /* Oculta el contenedor de la imagen real */
+}

@@ -13,7 +13,7 @@
 
     <h1>Cleaning Service Request</h1>
 
-    <div class="principal formulary" style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
         <form id="contactForm" action="https://formsubmit.co/dimavez.solutions@outlook.com" method="post" style="z-index: 1;">
             <ul>
                 <li>
@@ -69,15 +69,7 @@
                 </li>
             </ul>
         </form>
-        <div class="image-container">
-            <ul>
-                    <img src="./imagenes/Servicios-Commercial-cleaning.jpg" alt="Servicios-Commercial-cleaning">
-                    <img src="./imagenes/Servicios-Deep-cleaning.jpg" alt="Servicios-Deep-cleaning">
-                    <img src="./imagenes/Servicios-Move-in-out-cleaning.jpg" alt="Servicios-Move-in-out-cleaning">
-                    <img src="./imagenes/Servicios-Residential-cleaning.jpg" alt="Servicios-Residential-cleaning">
-                
-            </ul>
-        </div>
+
     </div>
      
 </body>
