@@ -1,0 +1,13 @@
+{
+    "emailError":{
+        "code": "001",
+        "message":"We coundn't send the emal",
+        "httpCode": 500
+    },
+    "notFoundPage":{
+        "code":"002",
+        "message":"Page not found, please contact with your admin",
+        "httpCode": 404
+    }
+    
+}
