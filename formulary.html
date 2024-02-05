@@ -1,71 +1,156 @@
-<!-- form.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Dimavez Solution</title>
    <link href="./css/estilos.css" rel='stylesheet'/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <style>
+      body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+      }
+
+      h1 {
+         text-align: center;
+      }
+
+      form {
+         margin: 20px;
+      }
+
+      ul {
+         list-style-type: none;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+      }
+
+      li {
+         margin-bottom: 10px;
+      }
+
+      .parallax-container {
+         overflow: hidden;
+         position: relative;
+         height: 100vh;
+      }
+
+      .parallax-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+
+      }
+
+      .parallax-image img {
+         width: 25%; /* Ajusta el ancho según tu preferencia */
+         height: auto;
+         transform-origin: center top;
+         transition: transform 0.5s ease;
+      }
+   </style>
 </head>
 <body>
 
     <h1>Cleaning Service Request</h1>
 
-    
-    <form id="contactForm" action="https://formsubmit.co/dimavez.solutions@outlook.com" method="post">
-        <ul style="list-style-type: none; padding: 0;">
-            <li>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </li>
-            <li>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </li>
-            <li>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </li>
-            <li>
-                <label>Cleaning Type:</label>
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <form id="contactForm" action="https://formsubmit.co/dimavez.solutions@outlook.com" method="post" style="z-index: 1;">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </li>
                 <br>
-                <input type="radio" id="deepCleaning" name="cleaningType" value="deepCleaning"><label for="deepCleaning">Deep Cleaning</label><br>
-                <input type="radio" id="moveInOut" name="cleaningType" value="moveInOut"><label for="moveInOut">Move In/Move Out</label><br>
-                <input type="radio" id="basicCleaning" name="cleaningType" value="basicCleaning"><label for="basicCleaning">Basic Cleaning</label><br>
-                <input type="radio" id="daily" name="cleaningType" value="daily"><label for="daily">Daily</label><br>
-                <input type="radio" id="weekly" name="cleaningType" value="weekly"><label for="weekly">Weekly</label><br>
-                <input type="radio" id="biWeekly" name="cleaningType" value="biWeekly"><label for="biWeekly">Bi-Weekly</label><br>
-                <input type="radio" id="monthly" name="cleaningType" value="monthly"><label for="monthly">Monthly</label><br>
-            </li>
-            <li>
-                <label for="placeType">Place Type:</label>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </li>
                 <br>
-                <select id="placeType" name="placeType" required>
-                    <option value="home">Home</option>
-                    <option value="smallStablishment">Small Establishment</option>
-                    <option value="bigStablishment">Big Establishment</option>
-                    <option value="garden">Garden</option>
-                    <option value="park">Park</option>
-                    <option value="other">Other</option>
-                </select>
-            </li>
-            <li id="otherType" style="display: none;">
-                <label for="otherPlaceType">Specify Other:</label>
-                <input type="text" id="otherPlaceType" name="otherPlace">
-            </li>
-        </ul>
+                <li>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </li>
+                <br>
+                <li>
+                    <label for="cleaningType">Cleaning Type:</label>
+                    <br>
+                    <select id="cleaningType" name="cleaningType" required>
+                        <option value="deepCleaning">Deep Cleaning</option>
+                        <option value="moveInOut">Move In/Move Out</option>
+                        <option value="basicCleaning">Basic Cleaning</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="biWeekly">Bi-Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </li>
+                <br>
+                <li>
+                    <label for="placeType">Place Type:</label>
+                    <br>
+                    <select id="placeType" name="placeType" required>
+                        <option value="home">Home</option>
+                        <option value="smallStablishment">Small Establishment</option>
+                        <option value="bigStablishment">Big Establishment</option>
+                        <option value="garden">Garden</option>
+                        <option value="park">Park</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <li id="otherType" style="display: none;">
+                        <label for="otherPlaceType">Specify Other:</label>
+                        <input type="text" id="otherPlaceType" name="otherPlace">
+                    </li>
+                </li>
+                <br>
+                <li>
+                    <input type="submit"  value="Submit Request">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
+                    <input type="hidden" name= "_captcha" value="false">
+                </li>
+            </ul>
+        </form>
+        <div class="parallax"></div>
+        <div class="box"></div>
+        <div class="parallax"></div>
+        <div class="parallax-container" style="z-index: 100;">
+            <div class="parallax-image" style="z-index: 1000;">
+                <ul>
+                    <li>
+                        <img src="./imagenes/Servicios-Commercial-cleaning.jpg" alt="image1">
+                    </li>
+                    <li>
+                        <img src="./imagenes/Servicios-Deep-cleaning.jpg" alt="image2">
+                    </li>
+                    <li>
+                        <img src="./imagenes/Servicios-Move-in-out-cleaning.jpg" alt="image3">
+                    </li>
+                    <li>
+                        <img src="./imagenes/Servicios-Residential-cleaning.jpg" alt="Simage4">
+                    </li>
+                </ul> 
+            </div>
+         </div>
+    </div>
 
-        <input type="submit"  value="Submit Request">
-        <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
-        <input type="hidden" name= "_captcha" value="false">
-    </form>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+           const parallaxImages = document.querySelectorAll(".parallax-image img");
+     
+           window.addEventListener("scroll", function () {
+              const scrolled = window.scrollY;
+              parallaxImages.forEach(img => {
+                 img.style.transform = "translate3d(0, " + scrolled * 0.5 + "px, 0)";
+              });
+           });
+        });
+     </script>
+     
 </body>
 </html>
-
-
-
-

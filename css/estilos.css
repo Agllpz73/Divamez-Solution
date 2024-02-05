@@ -11,6 +11,7 @@ ul {
     margin: 0;
     padding: 1;
     margin-top: auto;
+    z-index: 1000;
 }
 
 li {
@@ -30,13 +31,30 @@ li a {
 li a:hover {
     background-color: #c06c77;
 }
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8)
+}
 
+.menu a {
+    color: black;
+}
+
+ .content {
+    padding: 20px;
+ }
+.menu a:hover {
+    background-color: #c06c77;
+}
 .carrousel {
     margin: auto;
     text-align: center;
     
     height: auto;
     margin-top: auto;
+    z-index: 1;
 }
 
 #QuienesSomos {
@@ -71,10 +89,12 @@ li a:hover {
     overflow: hidden;
     position: relative; /* Necesario para que la posición absoluta funcione */
     margin-top: auto;
+    opacity: 1;
+    z-index: 1;
 }
 
 .itemCarrousel {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100%;
     margin: auto;
@@ -125,8 +145,8 @@ li a:hover {
     width: 100%;
     height: 100%;
     margin: auto;
-    background-color: white;
-    opacity: 0.4;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 1;
 }
 
 #itemCarrousel-2 {
@@ -172,4 +192,34 @@ li a:hover {
     margin-top: auto;
 }
 
+.main-content {
+    margin-top: 400px;
+    padding-top: 20px;
+}
 
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.parallax-container {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+ }
+
+ .parallax-image {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+ }
+
+ .parallax-image img {
+    width: 25%;
+    height: auto;
+    transform-origin: center top;
+    transition: transform 0.5s ease;
+ }
