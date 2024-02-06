@@ -137,7 +137,7 @@
             <h1>Cleaning Service Request</h1>
             <br>
     <div class="principal-formulary" style="display: flex; justify-content: space-between; align-items: flex-start;">
-        <form id="contactForm" action="https://formsubmit.co/dimavez.solutions@outlook.com" method="post" style="z-index: 1;">
+        <form id="contactForm" method="post" style="z-index: 1;">
             <ul>
                 <li>
                     <label for="name">Name:</label>
@@ -186,12 +186,33 @@
                 </li>
                 <br>
                 <li>
-                    <input type="submit"  value="Submit Request">
+                    <button type="button" onclick="enviarFormulario()" >Submit Request</button>
                     <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
                     <input type="hidden" name= "_captcha" value="false">
                 </li>
             </ul>
         </form>
+
+        <script>
+            function enviarFormulario(){
+                let formData = new FormData(document.getElementById('MyForm'))
+                fetch('dimavez.solutions@outlook.com/enviar',{
+                    method: 'POST',
+                    body: formData
+                }).then(response =>{
+                    if(! response){
+                        throw new Error('Error at the moment to send the formulary')
+                    }else{
+                        const res = response.text()
+                        return{
+                            res
+                        }
+                    }
+                }).then( data =>{
+                    console.log("Code 200, the email was send ",data)
+                })
+            }
+        </script>
 
             <div class="image-container" >
                 <ul style="background-color: white;">
