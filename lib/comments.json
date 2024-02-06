@@ -1,8 +1,15 @@
-{"comments":[
-    {
-        "message": ""
-    },
-    {
-        "message":""
-    }
-]}
+{
+    "comments":
+    [
+        {
+            "author":"",
+            "message": "",
+            "date":""
+        },
+        {
+            "author":"",
+            "message":"",
+            "date":""
+        }
+    ]
+}

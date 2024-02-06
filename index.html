@@ -136,7 +136,7 @@
             <br>
             <h1>Cleaning Service Request</h1>
             <br>
-    <div class="principal-formulary" style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div class="principal-formulary" id="myForm" style="display: flex; justify-content: space-between; align-items: flex-start;">
         <form id="contactForm" method="post" style="z-index: 1;">
             <ul>
                 <li>
@@ -187,16 +187,15 @@
                 <br>
                 <li>
                     <button type="button" onclick="enviarFormulario()" >Submit Request</button>
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
-                    <input type="hidden" name= "_captcha" value="false">
+                    <input type="hidden" name="_next" value="divames-solution.com">
                 </li>
             </ul>
         </form>
 
         <script>
             function enviarFormulario(){
-                let formData = new FormData(document.getElementById('MyForm'))
-                fetch('dimavez.solutions@outlook.com/enviar',{
+                var formData = new FormData(document.getElementById('contactForm'));
+                fetch('https://formspree.io/f/mdoqelqy',{
                     method: 'POST',
                     body: formData
                 }).then(response =>{
@@ -212,6 +211,7 @@
                     console.log("Code 200, the email was send ",data)
                 })
             }
+
         </script>
 
             <div class="image-container" >
@@ -226,6 +226,110 @@
 
             
         </div>
+
+        <!-- Aquí empieza el "Déjanos un comentario"-->
+        <div class="comments" id="comentario">
+            <form id="commentForm">
+                <br>
+                <h2>Let us know your experience with us</h2>
+                <br>
+                <label for="author">Author:</label><br>
+                <input type="text" id="author" name="author" required><br>
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+                <button type="submit" id="submitButton">Submit Comment</button>
+            </form>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script>
+            document.getElementById('commentForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita que el formulario se envíe automáticamente
+        
+                // Obtén los datos del formulario
+                var author = document.getElementById('author').value;
+                var comment = document.getElementById('comment').value;
+                var timestamp = moment().format();
+        
+                // Llama a la función para agregar el comentario
+                agregarComentario(author, comment, timestamp);
+        
+                // Envía el formulario por correo electrónico
+                enviarCorreo(author, comment);
+            });
+        
+            /*function agregarComentario(author, comment, timestamp) {
+                function agregarComentario(author, message, date) {
+            // Obtén el contenido actual del archivo JSON
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', './lib/comments.json', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Parsea el contenido del archivo JSON
+                    var data = JSON.parse(xhr.responseText);
+                    
+                    // Agrega el nuevo comentario al array de comentarios
+                    data.comments.push({
+                        author: author,
+                        message: message,
+                        date: date
+                    });
+
+                    // Convierte los datos actualizados de nuevo a formato JSON
+                    var newData = JSON.stringify(data);
+
+                    // Envía una solicitud PUT para guardar los comentarios actualizados en el archivo JSON
+                    var xhr2 = new XMLHttpRequest();
+                    xhr2.open('PUT', './lib/comments.json', true);
+                    xhr2.setRequestHeader('Content-Type', 'application/json');
+                    xhr2.onreadystatechange = function () {
+                        if (xhr2.readyState == 4 && xhr2.status == 200) {
+                            console.log('Comentario guardado con éxito');
+                        } else if (xhr2.readyState == 4 && xhr2.status != 200) {
+                            console.error('Error al guardar el comentario:', xhr2.status);
+                        }
+                    };
+                    xhr2.send(newData);
+                }
+            };
+            xhr.send();
+        }
+
+                        console.log('Nuevo comentario:');
+                        console.log('Author:', author);
+                        console.log('Comment:', comment);
+                        console.log('Timestamp:', timestamp);
+                    }*/
+                
+                    function enviarCorreo(author, comment) {
+                        // Datos del formulario para enviar por correo a Formspree
+                        var formData = new FormData();
+                        formData.append('author', author);
+                        formData.append('comment', comment);
+                
+                        // Realiza una solicitud POST a Formspree para enviar el formulario por correo electrónico
+                        fetch('https://formspree.io/f/mdoqelqy', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Error al enviar el formulario');
+                            }
+                            console.log('Formulario enviado con éxito');
+                            // Aquí podrías mostrar un mensaje de éxito al usuario si lo deseas
+                        })
+                        .catch(error => {
+                            console.error('Error al enviar el formulario:', error);
+                            // Maneja el error de alguna manera (por ejemplo, muestra un mensaje al usuario)
+                        });
+                    }
+        </script>
+        
+            </div>
         <div>
             <ul>
                 <li style="float: right; background: white; border-radius: 100%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
@@ -234,5 +338,6 @@
                 
             </ul>            
         </div>
+        <!--Developed by Angel López & Julio Haro From México-->
 </body>
 </html>
