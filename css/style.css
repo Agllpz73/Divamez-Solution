@@ -203,6 +203,33 @@ button:hover {
 .itemCarrouselArrows > a > i {
     color: white;
 }
+
+table {
+    width: 100%; /* Opcional: para que la tabla ocupe todo el ancho del contenedor */
+    border-collapse: collapse; /* Para fusionar los bordes de las celdas */
+    background-color: #c58b93; /* Color de fondo de la tabla */
+  }
+
+  th, td {
+    padding: 10px; /* Espaciado interno de las celdas */
+    text-align: left; /* Texto centrado en todas las celdas */
+    vertical-align: top; /* Alineación vertical del contenido */
+      width: 33%; /* Ancho fijo para cada celda */
+  }
+
+  th {
+    background-color: #c58b93; /* Color de fondo de las celdas del encabezado */
+    color: black; /* Color de texto del encabezado */
+  }
+  .objectives-list {
+    margin: 0; /* Eliminar el margen predeterminado de la lista */
+    padding-left: 20px; /* Agregar un relleno a la izquierda para la lista */
+  }
+
+  /* Opcional: Estilo para las filas impares */
+  tr:nth-child(odd) {
+    background-color: #f7f7f7; /* Color de fondo para filas impares */
+  }
 .sexta img{
     width: 90%;
     margin: 2%;
