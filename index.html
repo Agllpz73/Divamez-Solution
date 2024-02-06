@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimavez Solution</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 <body >
     <div class="contenedor">
-        <nav style="z-index: 999;">
+        <nav>
             <ul>
                 
                 <div class="menu">
                    
+                   <a href="#section2"><img style="width: 7%; float:right;   margin: 1%;" src="imagenes/Sec. 1 - Boton Home.png"  alt=""></a> 
+                    <a href="#section7"><img style="width: 7%; float:right;   margin: 1%;" src="imagenes/Sec. 1 - Boton telefono 2.png" alt=""></a>
+                    <a href="#section6"><img style="width: 7%; float:right;   margin: 1%;" src="imagenes/Sec. 1 - Boton Ubicacion 3.png"  alt=""></a>
+                    <a href="#section4"><img style="width: 7%; float:right;   margin: 1%;" src="imagenes/Sec. 1 - Boton about us 2.png" alt=""></a>
+                    <a href=""></a><img src="./imagenes/logoEmpresa2.png" alt="" style="width: 200px; height: auto; z-index: 1000;">
+                    <p style="font-family: Yu Gothic; font-size: 30px;">DIMAVEZ SOLUTION LLC</p>
+                    <p style="font-family: Yu Gothic; font-size: 20px;">COMMERCIAL & RESIDENTIAL CLEANING</p>
+
                    <a href="#section2"><img src="imagenes/Sec. 1 - Boton Home.png"  alt=""></a> 
                     <a href="#"><img src="imagenes/Sec. 1 - Boton telefono 2.png" alt=""></a>
                     <a href="#section3"></a><img src="imagenes/Sec. 1 - Boton Ubicacion 3.png"  alt="">
@@ -26,23 +34,23 @@
                     <p style="font-family: Yu Gothic; font-size: 50px;">DIMAVEZ SOLUTION LLC</p>
                     <p style="font-family: Yu Gothic; font-size: xx-large;">COMMERCIAL & RESIDENTIAL CLEANING</p>
                 </div>
+                
+               
             </ul>
         </nav>
-        <br><br><br><br><br><br><br><br><br> 
-          
-        <div class="segunda" id="section2" >
-            <img src="imagenes/Sec. 1 - Logo Sim 5 - Negro.png" alt="">
-            <p style="margin-left: 5%; font-size: 75px;">DIMAVEZ SOLUTION</p>
-            <p style="font-size: 40px; margin-left: 1%;">COMMERCIAL & RESIDENTIAL CLEANING</p>
-            
-        </div>
-        <br><br><br><br><br><br><br><br>
+        
+        
     
-        <div class="tercero">
+        <div class="tercero" id="section2">
+           <div class="wrap">
+            <div class="text">
+                
             <p>SAINT PAUL & MINNEAPOLIS</p>
             <p>COMMERCIAL RESIDENTIAL</p>
             <p>CLEANING</p>
             <p>SUBCONTRACT</p>
+            </div>
+           </div>
     
         </div>
         <br><br><br><br>
@@ -55,33 +63,41 @@
         </div>
 
         <div class="cuartoIzq" >
-            <p >Cuarta parte </p><br>
             
+            <div class="image-container" >
+                <ul style="background-color: white;">
+                        
+                        <img src="./imagenes/Servicios-Residential-cleaning.jpg" alt="Servicios-Residential-cleaning" >
+                        <img src="imagenes/Servicios-Deep-cleaning.jpg" alt="">
+                        <img src="imagenes/Servicios Move in out cleaning.jpg" alt="">
+                    
+                </ul>
+            </div>
         </div>
         <div class="quinto">
             <p>REVIEWS / FAQ'S</p><br>
             <img src="imagenes/Sec. 5 - Boton Reviews.png" alt=""><br>
-            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;">Our grown in this 2 years...</p><br><br><br>
-            <div class="carrousel" style="margin-top: auto; z-index: 1;">
-                <div class="conteCarrousel" style="z-index: 1;">
-                    <div class="itemCarrousel" id="itemCarrousel-1" style="z-index: 1;">
+            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;">Our grown in this 5 years...</p><br><br><br>
+            <div class="carrousel" style="margin-top: auto; ">
+                <div class="conteCarrousel">
+                    <div class="itemCarrousel" id="itemCarrousel-1">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
+                            <p class="parrafoCarrousel"></p>
+                        </div>
+                        
+                    </div>
+                    <div class="itemCarrousel" id="itemCarrousel-2">
+                        <div class="itemCarrouselTarjeta">
+                            <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
                             <p class="parrafoCarrousel" ></p>
                         </div>
                         
                     </div>
-                    <div class="itemCarrousel" id="itemCarrousel-2" style="z-index: 1;">
-                        <div class="itemCarrouselTarjeta">
-                            <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
-                            <p class="parrafoCarrousel"  ></p>
-                        </div>
-                        
-                    </div>
-                    <div class="itemCarrousel" id="itemCarrousel-3" style="z-index: 1;">
+                    <div class="itemCarrousel" id="itemCarrousel-3">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
-                            <p class="parrafoCarrousel"  ></p>
+                            <p class="parrafoCarrousel"  ></p> <!-- Nuevo párrafo -->
                         </div>
                        
                     </div>
@@ -89,6 +105,8 @@
         
             </div>
 
+
+            
         </div>
         <script>
             function cambiarContenido(nuevoParrafo, nuevaImagen) {
@@ -97,7 +115,7 @@
             }
         
             function cambiarAutomaticamente() {
-                const parrafo1= ' '
+                const parrafo1= ''
                 const parrafo2 = ' '
                 const parrafo3 = ' '
                 const contenidos = [
@@ -123,15 +141,75 @@
             <script>
                 function abrirVentana() {
                     var nuevaVentana = window.open('https://www.google.com/maps/place/Brooklyn+Center,+Minnesota+55443,+EE.+UU./@45.1231095,-93.3578993,13z/data=!4m6!3m5!1s0x52b33a14cb074d2f:0xfb37e697bceebf3f!8m2!3d45.1243266!4d-93.3337208!16s%2Fm%2F01_y467?entry=ttu', '_blank');
-                    // Puedes agregar opciones adicionales para personalizar la apariencia de la nueva ventana aquí
+                    
                 }
             </script>
-            
+            <br><br>
+        <div class="tabla">
+            <table border="1">
+                <tr>
+                  <th>Misión</th>
+                  <th>Visión</th>
+                  <th>Objetivos</th>
+                </tr>
+                <tr>
+                  <td>Enhance the quality of life for our clients in Minnesota by providing exceptional cleaning services through our commitment professionalism and innovation.
+                </td>
+                  <td>To be the leading company in Minnesota, recognized for our dedication and excellent professionalism showing the well-being of our clients.
+                </td>
+                    <td>"1. Customer Satisfaction: Provide consistently high-quality cleaning services that exceed customer expectations. Regularly solicit and act upon customer feedback to enhance our services.
+                        2. Professionalism and Training: Invest in ongoing training and development programs for our cleaning staff to ensure they are well-equipped with the latest skills and knowledge. Maintain a professional and courteous demeanor in all interactions with clients.
+                        3. Innovation and Technology: Stay at the forefront of technological advancements in the cleaning industry.
+                        Incorporate innovative solutions and technologies to improve efficiency and effectiveness in our cleaning processes.
+                        4. Health and Safety: Prioritize the health and safety for our clients and cleaning staff.
+                        Comply with all relevant health and safety regulations and standards.
+                        By adhering to these principles and objectives, our cleaning company in Minnesota aims to create a lasting impact.
+                        "
+                    </td>
+                </tr>
+              </table>
+        </div>
             
         </div><br><br>
-        <div class="sexta" id="secction6">
-            <p>LOCATIONS</p><br><br>
+        <div class="sexta" id="section6">
+            <p>LOCATIONS</p>
+            <img src="imagenes/Sec. 6 - Boton Ubicacion 2.png" style="height: 10%; width: 10%; background-color: white;" alt="">
+            <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="app.js"></script>
         </div>
+        <br><br>
+        <div id="contenedor">
+            <button onclick="abrirVentana()">MAPS</button>
+        </div>
+    
+        <script>
+            function abrirVentana() {
+                var nuevaVentana = window.open('https://www.google.com/maps/place/Brooklyn+Center,+Minnesota+55443,+EE.+UU./@45.1231095,-93.3578993,13z/data=!4m6!3m5!1s0x52b33a14cb074d2f:0xfb37e697bceebf3f!8m2!3d45.1243266!4d-93.3337208!16s%2Fm%2F01_y467?entry=ttu', '_blank');
+                
+            }
+        </script>
+        
+        
+    </div>
+    <br><br>
+       
+        
+        <div class="septimo" id="section7">
+            <p style="text-align: center; font-size: 30px;">CONTACT</p>
+            
+             
+        </div>
+        <footer>
+            <div class="contacto">
+              <div class="info-contacto">
+                <img src="./imagenes/logoEmpresa2.png" alt="" style="width: 200px; height: auto; z-index: 1000;">
+                <div>
+                <p>CONTACT INFORMATION</p>
+                <p>1234 Lake Park, MN, MN, 55555</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <a href="#" target="_blank"><img src="imagenes/Sec. 7 - Boton Facebook.png" alt=""></a>
+                <a href="#" target="_blank"><img src="imagenes/Sec. 7 - Boton Telefono.png" alt=""></a> 
         <div class="formulary" >
             <br>
             <h1>Cleaning Service Request</h1>
@@ -192,6 +270,72 @@
             </ul>
         </form>
 
+                </div>
+                
+                
+              </div>
+              <div class="logo">
+                
+              </div>
+              <div class="redes-sociales">
+                <!-- Puedes agregar íconos o enlaces a redes sociales aquí -->
+                <form id="contactForm" action="https://formsubmit.co/dimavez.solutions@outlook.com" method="post" >
+                    <ul>
+                        <li>
+                            <label for="name" >Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </li>
+                        <br>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </li>
+                        <br>
+                        <li>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </li>
+                        <br>
+                        <li>
+                            <label for="cleaningType">Cleaning Type:</label>
+                            <br>
+                            <select id="cleaningType" name="cleaningType" required>
+                                <option value="deepCleaning">Deep Cleaning</option>
+                                <option value="moveInOut">Move In/Move Out</option>
+                                <option value="basicCleaning">Basic Cleaning</option>
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="biWeekly">Bi-Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </li>
+                        <br>
+                        <li>
+                            <label for="placeType">Place Type:</label>
+                            <br>
+                            <select id="placeType" name="placeType" required>
+                                <option value="home">Home</option>
+                                <option value="smallStablishment">Small Establishment</option>
+                                <option value="bigStablishment">Big Establishment</option>
+                                <option value="garden">Garden</option>
+                                <option value="park">Park</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <li id="otherType" style="display: none;">
+                                <label for="otherPlaceType">Specify Other:</label>
+                                <input type="text" id="otherPlaceType" name="otherPlace">
+                            </li>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="submit"  value="Submit Request">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
+                            <input type="hidden" name= "_captcha" value="false">
+                        </li>
+                    </ul>
+                </form>
+        
+              </div>
         <script>
             function enviarFormulario(){
                 var formData = new FormData(document.getElementById('contactForm'));
@@ -223,6 +367,9 @@
                     
                 </ul>
             </div>
+        </footer>
+    </div>
+
 
             
         </div>

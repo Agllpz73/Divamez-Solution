@@ -13,11 +13,12 @@ nav{
     width: 100%;
     height: 15vh;
     position: fixed;
+    z-index: 999;
 }
 ul {
     list-style-type: none;
     background-color: #c58b93;
-    overflow: hidden;
+    overflow: auto;
     margin: 0;
     padding: 1;
     
@@ -33,11 +34,11 @@ ul p{
 img:hover {
     background-color: #c06c77;
 }
-
 .menu img{
     width: 7%; float: right;
     margin: 1%;
 }
+
 
 .segunda img{
     float: left;
@@ -54,11 +55,21 @@ img:hover {
 .tercero{
     font-size: 70px;
     text-align: center;
+    width: 100vw;
+    height: 100vh;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/imagenes/fondo-transformed\ \(1\).jpeg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .cuarto p{
     text-align: center;
-    font-size: 65px;
+    font-size: 50px;
 
 }
 .cuarto img{
@@ -67,13 +78,20 @@ img:hover {
     display: block; margin-left: 45%; margin-right: 50%;
     
 }
-.cuartoIzq{
-    
-    background-color: #c58b93;
-}
+
+
+.image-container img {
+    background-color: white;
+    width: 25%;
+    height: 40%;
+    margin: 2%;
+ }
+
+
 .cuartoIzq p{
     font-size: 40px;
 }
+
 
 .quinto{    
     margin: auto;
@@ -149,10 +167,6 @@ button:hover {
     margin-top: auto;    
     z-index: 2; 
 }
-
-
-
-
 #itemCarrousel-1 img {
     width: 100%;
     height: 100%;
@@ -193,3 +207,91 @@ button:hover {
     background-color: #c58b93;
     margin-top: auto;
 }
+
+table {
+    width: 100%; /* Opcional: para que la tabla ocupe todo el ancho del contenedor */
+    border-collapse: collapse; /* Para fusionar los bordes de las celdas */
+    background-color: #c58b93; /* Color de fondo de la tabla */
+  }
+
+  th, td {
+    padding: 10px; /* Espaciado interno de las celdas */
+    text-align: left; /* Texto centrado en todas las celdas */
+    vertical-align: top; /* Alineación vertical del contenido */
+      width: 33%; /* Ancho fijo para cada celda */
+  }
+
+  th {
+    background-color: #c58b93; /* Color de fondo de las celdas del encabezado */
+    color: black; /* Color de texto del encabezado */
+  }
+  .objectives-list {
+    margin: 0; /* Eliminar el margen predeterminado de la lista */
+    padding-left: 20px; /* Agregar un relleno a la izquierda para la lista */
+  }
+
+  /* Opcional: Estilo para las filas impares */
+  tr:nth-child(odd) {
+    background-color: #f7f7f7; /* Color de fondo para filas impares */
+  }
+.sexta img{
+    width: 90%;
+    margin: 2%;
+    
+}
+
+.septimo{
+    background-color: #c58b93;
+    
+    
+}
+#map {
+    height: 500px;
+    width: 100%;
+  }
+
+label{
+    font-size: 30px;
+    
+}
+select{
+    font-size: 25px;
+}
+input{
+    font-size: 20px;
+}
+
+
+footer {
+    background-color: #c58b93; /* Color de fondo de la barra de contacto */
+    color: white; /* Color del texto */
+    padding: 10px; /* Ajusta el relleno según tus necesidades */
+    text-align: center;
+  }
+
+  .contacto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .info-contacto {
+    flex-grow: 1; /* Para que ocupe todo el espacio disponible */
+    text-align: left;
+
+  }
+  .info-contacto img{
+    width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .info-contacto p{
+    font-size: 30px;
+  }
+
+  .redes-sociales {
+    text-align: right;
+  }
+
+
