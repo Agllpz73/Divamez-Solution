@@ -189,3 +189,7 @@ button:hover {
 .itemCarrouselArrows > a > i {
     color: white;
 }
+.comentario{
+    background-color: #c58b93;
+    margin-top: auto;
+}
