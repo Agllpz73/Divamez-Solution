@@ -72,63 +72,67 @@
         <div class="quinto">
             <p>REVIEWS / FAQ'S</p><br>
             <img src="imagenes/Sec. 5 - Boton Reviews.png" alt=""><br>
-            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;">Our grown in this 2 years was about safety, 
+            <p style="font-family: 'Yu Gothic', sans-serif; text-align: center; font-size: medium;">
+                Our grown in this 5 years was about safety, 
                 confidence and perfection in every duty we had in every enviroment we has to done. 
-                How in hospitals, residential cleaning and commercial place. Our staff are the tools and together the company working for your cleaning.</p><br><br><br>
+                How in hospitals, residential cleaning and commercial place. Our staff are the tools and 
+                together the company working for your cleaning.
+            </p>
+            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;"></p><br><br><br>
             <div class="carrousel" style="margin-top: auto;">
                 <div class="conteCarrousel">
                     <div class="itemCarrousel" id="itemCarrousel-1">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
-                            <div class="textoConFondoNegro">
-                                <p class="parrafoCarrousel" style="text-align: center;">COMMERCIAL CLEANING: <br> Profetional cleaning on subcontract companies. <br></p>
-                            </div>
+                            <p class="parrafoCarrousel" style="font-family: Roboto, sans-serif; background-color: rgba(0,0,0,0.7);color: #fff; padding: 20px; border-radius: 10px; position: absolute; width: 100%; box-sizing: border-box; font-size:medium;"> COMMERCIAL CLEANING: <br>
+                                Profetional cleaning on subcontract companies.</p>
                         </div>
+                        
                     </div>
                     <div class="itemCarrousel" id="itemCarrousel-2">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
-                            <div class="textoConFondoNegro">
-                                <p class="parrafoCarrousel" style="text-align: center; margin-top: auto;"> <br><br>DEEP CLEANING: <br> Cleaning performed when a house or apartment has completed construction and/or any necessary repairs.</p>
-                            </div>
+                            <p class="parrafoCarrousel"  style="font-family: Roboto, sans-serif; background-color: rgba(0,0,0,0.7);color: #fff; padding: 20px; border-radius: 10px; position: absolute; width: 100%; box-sizing: border-box; font-size: medium;"> DEEP CLEANING: <br>
+                                Cleaning performed when a house or apartment has completed construction and/or any necessary repairs.</p>
                         </div>
+                        
                     </div>
                     <div class="itemCarrousel" id="itemCarrousel-3">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
-                            <div class="textoConFondoNegro">
-                                <p class="parrafoCarrousel" style="text-align: center; margin-top: 200px; margin-bottom: 200px;">MOVE IN/MOVE OUT CLEANING: <br> Cleaning service provided when an apartment or house has been vacated.</p>
-                            </div>
+                            <p class="parrafoCarrousel"  style="font-family: Roboto, sans-serif; background-color: rgba(0,0,0,0.7);color: #fff; padding: 20px; border-radius: 10px; position: absolute; width: 100%; box-sizing: border-box; font-size: medium;">We count with 2 years of experience</p> <!-- Nuevo párrafo -->
                         </div>
+                       
                     </div>
                 </div>
             </div>
+            <script>
+                function cambiarContenido(nuevoParrafo, nuevaImagen) {
+                    document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
+                    document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
+                }
+            
+                function cambiarAutomaticamente() {
+                    const parrafo1= 'COMMERCIAL CLEANING:  \nProfetional cleaning on subcontract companies.'
+                    const parrafo2 = 'DEEP CLEANING: \nCleaning performed when a house or apartment has completed construction and/or any necessary repairs.'
+                    const parrafo3 = ' MOVE IN/MOVE OUT CLEANING: \nCleaning service provided when an apartment or house has been vacated.'
+                    const contenidos = [
+                        { parrafo: parrafo1, imagen: 'baño.jpg' },
+                        { parrafo: parrafo2, imagen: 'casa.jpg' },
+                        { parrafo: parrafo3, imagen: 'establecimiento.jpg' }
+                    ];
+            
+                    let indice = 0;
+            
+                    setInterval(function () {
+                        cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
+                        indice = (indice + 1) % contenidos.length;
+                    }, 5000);
+                }
+                window.onload = cambiarAutomaticamente;
+            </script>
 
-<script>
-    function cambiarContenido(nuevoParrafo, nuevaImagen) {
-        document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
-        document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
-    }
 
-    function cambiarAutomaticamente() {
-        const parrafo1= 'COMMERCIAL CLEANING: \nProfetional cleaning on subcontract companies.'
-        const parrafo2 = 'CLEANING: \nCleaning performed when a house or apartment has completed construction and/or any necessary repairs.'
-        const parrafo3 = 'MOVE IN/MOVE OUT CLEANING: \nCleaning service provided when an apartment or house has been vacated.'
-        const contenidos = [
-            { parrafo: parrafo1, imagen: 'baño.jpg' },
-            { parrafo: parrafo2, imagen: 'casa.jpg' },
-            { parrafo: parrafo3, imagen: 'establecimiento.jpg' }
-        ];
-
-        let indice = 0;
-
-        setInterval(function () {
-            cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
-            indice = (indice + 1) % contenidos.length;
-        }, 500);
-    }
-    window.onload = cambiarAutomaticamente;
-</script>
 <br><br><br>
 <div id="contenedor">
     <button onclick="abrirVentana()">WRITE A REVIEWS</button>
@@ -141,19 +145,19 @@
 </script>
 
             <br><br>
-        <div class="tabla">
+        <div class="tabla" style="text-align: center;">
             <table border="1">
                 <tr>
-                  <th>Misión</th>
-                  <th>Visión</th>
-                  <th>Objetivos</th>
+                  <th style="text-align: center;">Missionn</th>
+                  <th style="text-align: center;">Vision</th>
+                  <th style="text-align: center;">Objetives</th>
                 </tr>
                 <tr>
-                  <td>Enhance the quality of life for our clients in Minnesota by providing exceptional cleaning services through our commitment professionalism and innovation.
+                  <td style="text-align: center;">Enhance the quality of life for our clients in Minnesota by providing exceptional cleaning services through our commitment professionalism and innovation.
                 </td>
-                  <td>To be the leading company in Minnesota, recognized for our dedication and excellent professionalism showing the well-being of our clients.
+                  <td style="text-align: center;">To be the leading company in Minnesota, recognized for our dedication and excellent professionalism showing the well-being of our clients.
                 </td>
-                    <td>"1. Customer Satisfaction: Provide consistently high-quality cleaning services that exceed customer expectations. Regularly solicit and act upon customer feedback to enhance our services.
+                    <td style="text-align: center;">"1. Customer Satisfaction: Provide consistently high-quality cleaning services that exceed customer expectations. Regularly solicit and act upon customer feedback to enhance our services.
                         2. Professionalism and Training: Invest in ongoing training and development programs for our cleaning staff to ensure they are well-equipped with the latest skills and knowledge. Maintain a professional and courteous demeanor in all interactions with clients.
                         3. Innovation and Technology: Stay at the forefront of technological advancements in the cleaning industry.
                         Incorporate innovative solutions and technologies to improve efficiency and effectiveness in our cleaning processes.
@@ -316,7 +320,7 @@
         </div>
 
         <!-- Aquí empieza el "Déjanos un comentario"-->
-        <div class="comments" id="comentario" style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div class="comments" id="comentario" style="display: flex; justify-content: space-between; align-items: flex-start; font-family: 'Roboto', sans-serif;">
             <form id="commentForm">
                 <br>
                 <h2>Let us know your experience with us</h2>
@@ -416,13 +420,14 @@
                         });
                     }
         </script>
-        
+        <br>
             </div>
         <div>
             <ul>
                 <li style="float: right; background: white; border-radius: 100%; justify-content: space-around;"><a href="#" class="fa-brands fa-twitter"></a></li>
                 <li style="float: right; background: white; border-radius: 100%; justify-content: space-around" ><a href="#" class="fa-brands fa-facebook"></a></li>
-                <p style="font-family: 'Yu Gothic', sans-serif; src: local('Yu Gothic Medium'); color:black;">Contact us: email@example.com</p>
+                <br>
+                <p style="font-family: 'Yu Gothic', sans-serif; src: local('Yu Gothic Medium'); color:black;">Contact us: dimavez.solutions@outlock.com</p>
                 
             </ul>            
         </div>
