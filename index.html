@@ -38,7 +38,7 @@
     
         <div class="tercero" id="section2">
            <div class="wrap">
-            <div class="text">
+            <div class="text" style="color: whitesmoke; background-color:  rgba(0, 0, 0, 0.1);">
                 
             <p>SAINT PAUL & MINNEAPOLIS</p>
             <p>COMMERCIAL RESIDENTIAL</p>
@@ -72,73 +72,74 @@
         <div class="quinto">
             <p>REVIEWS / FAQ'S</p><br>
             <img src="imagenes/Sec. 5 - Boton Reviews.png" alt=""><br>
-            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;">Our grown in this 5 years...</p><br><br><br>
-            <div class="carrousel" style="margin-top: auto; ">
+            <p style="margin: 0 0 0 2%; text-align: left; font-size: 40px;">Our grown in this 2 years was about safety, 
+                confidence and perfection in every duty we had in every enviroment we has to done. 
+                How in hospitals, residential cleaning and commercial place. Our staff are the tools and together the company working for your cleaning.</p><br><br><br>
+            <div class="carrousel" style="margin-top: auto;">
                 <div class="conteCarrousel">
                     <div class="itemCarrousel" id="itemCarrousel-1">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel1" src="imagenes/baño.jpg" alt="">
-                            <p class="parrafoCarrousel"></p>
+                            <div class="textoConFondoNegro">
+                                <p class="parrafoCarrousel" style="text-align: center;">COMMERCIAL CLEANING: <br> Profetional cleaning on subcontract companies. <br></p>
+                            </div>
                         </div>
-                        
                     </div>
                     <div class="itemCarrousel" id="itemCarrousel-2">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel2" src="imagenes/casa.jpg" alt="">
-                            <p class="parrafoCarrousel" ></p>
+                            <div class="textoConFondoNegro">
+                                <p class="parrafoCarrousel" style="text-align: center; margin-top: auto;"> <br><br>DEEP CLEANING: <br> Cleaning performed when a house or apartment has completed construction and/or any necessary repairs.</p>
+                            </div>
                         </div>
-                        
                     </div>
                     <div class="itemCarrousel" id="itemCarrousel-3">
                         <div class="itemCarrouselTarjeta">
                             <img id="imagenCarrusel3" src="imagenes/establecimiento.jpg" alt="">
-                            <p class="parrafoCarrousel"  ></p> <!-- Nuevo párrafo -->
+                            <div class="textoConFondoNegro">
+                                <p class="parrafoCarrousel" style="text-align: center; margin-top: 200px; margin-bottom: 200px;">MOVE IN/MOVE OUT CLEANING: <br> Cleaning service provided when an apartment or house has been vacated.</p>
+                            </div>
                         </div>
-                       
                     </div>
                 </div>
-        
             </div>
 
+<script>
+    function cambiarContenido(nuevoParrafo, nuevaImagen) {
+        document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
+        document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
+    }
 
-            
-        </div>
-        <script>
-            function cambiarContenido(nuevoParrafo, nuevaImagen) {
-                document.querySelector('.parrafoCarrousel').textContent = nuevoParrafo;
-                document.getElementById('imagenCarrusel1').src = 'imagenes/' + nuevaImagen;
-            }
-        
-            function cambiarAutomaticamente() {
-                const parrafo1= ''
-                const parrafo2 = ' '
-                const parrafo3 = ' '
-                const contenidos = [
-                    { parrafo: parrafo1, imagen: 'baño.jpg' },
-                    { parrafo: parrafo2, imagen: 'casa.jpg' },
-                    { parrafo: parrafo3, imagen: 'establecimiento.jpg' }
-                ];
-        
-                let indice = 0;
-        
-                setInterval(function () {
-                    cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
-                    indice = (indice + 1) % contenidos.length;
-                }, 5000);
-            }
-            window.onload = cambiarAutomaticamente;
-        </script>
-        <br><br><br>
-            <div id="contenedor">
-                <button onclick="abrirVentana()">WRITE A REVIEWS</button>
-            </div>
-        
-            <script>
-                function abrirVentana() {
-                    var nuevaVentana = window.open('https://www.google.com/maps/place/Brooklyn+Center,+Minnesota+55443,+EE.+UU./@45.1231095,-93.3578993,13z/data=!4m6!3m5!1s0x52b33a14cb074d2f:0xfb37e697bceebf3f!8m2!3d45.1243266!4d-93.3337208!16s%2Fm%2F01_y467?entry=ttu', '_blank');
-                    
-                }
-            </script>
+    function cambiarAutomaticamente() {
+        const parrafo1= 'COMMERCIAL CLEANING: \nProfetional cleaning on subcontract companies.'
+        const parrafo2 = 'CLEANING: \nCleaning performed when a house or apartment has completed construction and/or any necessary repairs.'
+        const parrafo3 = 'MOVE IN/MOVE OUT CLEANING: \nCleaning service provided when an apartment or house has been vacated.'
+        const contenidos = [
+            { parrafo: parrafo1, imagen: 'baño.jpg' },
+            { parrafo: parrafo2, imagen: 'casa.jpg' },
+            { parrafo: parrafo3, imagen: 'establecimiento.jpg' }
+        ];
+
+        let indice = 0;
+
+        setInterval(function () {
+            cambiarContenido(contenidos[indice].parrafo, contenidos[indice].imagen);
+            indice = (indice + 1) % contenidos.length;
+        }, 500);
+    }
+    window.onload = cambiarAutomaticamente;
+</script>
+<br><br><br>
+<div id="contenedor">
+    <button onclick="abrirVentana()">WRITE A REVIEWS</button>
+</div>
+
+<script>
+    function abrirVentana() {
+        var nuevaVentana = window.open('https://www.google.com/maps/place/Brooklyn+Center,+Minnesota+55443,+EE.+UU./@45.1231095,-93.3578993,13z/data=!4m6!3m5!1s0x52b33a14cb074d2f:0xfb37e697bceebf3f!8m2!3d45.1243266!4d-93.3337208!16s%2Fm%2F01_y467?entry=ttu', '_blank');
+    }
+</script>
+
             <br><br>
         <div class="tabla">
             <table border="1">
