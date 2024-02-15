@@ -134,7 +134,7 @@ button:hover {
 }
 .conteCarrousel {
     width: 50%;
-    height: 700px;
+    height: 1200px;
     margin: auto;
     overflow: hidden;
     position: relative; /* Necesario para que la posición absoluta funcione */
