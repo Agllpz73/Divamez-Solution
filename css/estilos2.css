@@ -8,55 +8,54 @@ body{
     background-color: white;
 }
 
-.slider-box{
-    width: 1280px;
-    height: auto;
-    margin: 50px auto 0;
-    overflow: hidden;
-
-}
-.slider-box ul{
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation: slide 10s infinite alternate ease-in-out;
-}
-.slider-box li{
-    width: 100%;
-    list-style: none;
+.carousel-container {
     position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
 }
 
-.texto{
-    position: absolute;
-    text-align: center;
-    padding: 0 550px;
-    top: 800px;
-    color: white;
-
-}
-.texto h2{
-    font-size: 45px;
-    margin-bottom: 35px;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%;
 }
 
-.slider-box img{
+.slide {
+    position: relative;
+    flex: 0 0 33.33%;
+}
+
+.slide img {
     width: 100%;
+    height: auto;
 }
 
-@keyframes slide{
-    0%{margin-left: 0%;}
-    30%{margin-left: 0%;}
-
-    35%{margin-left: -100%;}
-    55%{margin-left: -100%;}
-
-    60%{margin-left: -200%;}
-    100%{margin-left: -200%;}
-
-    
-
-
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
 }
 
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
 
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}

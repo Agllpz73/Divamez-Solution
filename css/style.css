@@ -25,18 +25,19 @@ ul {
 }
 
 
-ul p{
-    
-    color: black;
-    text-decoration: none;
-    margin: 0;
-}
 img:hover {
     background-color: #c06c77;
 }
 .menu img{
-    width: 7%; float: right;
-    margin: 1%;
+    width: 4%; 
+    float: left;
+    margin-left: 1%;
+    
+}
+
+.redes-Sociales img{
+    width: 4%;
+    float: right;
 }
 
 
@@ -115,19 +116,7 @@ img:hover {
     align-items: center;
     height: 10%; /* Ajusta la altura según tus necesidades */
 }
-button {
-    font-family: Yu Gothic;
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: #c58b93;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #c06c77;
-}
+
 .sexta{
     font-size: 60px;
     text-align: center;
@@ -203,6 +192,20 @@ button:hover {
 .itemCarrouselArrows > a > i {
     color: white;
 }
+button {
+    font-family: Yu Gothic;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #c58b93;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #c06c77;
+}
+
 .comentario{
     background-color: #c58b93;
     margin-top: auto;
@@ -248,7 +251,7 @@ table {
 #map {
     height: 500px;
     width: 100%;
-  }
+}
 
 label{
     font-size: 30px;
@@ -269,34 +272,42 @@ footer {
     text-align: center;
   }
 
-  .contacto {
+.contacto {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
-  }
-  .info-contacto {
+}
+.info-contacto {
     flex-grow: 1; /* Para que ocupe todo el espacio disponible */
     text-align: left;
 
-  }
-  .info-contacto img{
+}
+.info-contacto img{
     width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
     height: auto;
     margin-right: 10px;
-  }
+}
 
-  .info-contacto p{
+.info-contacto p{
     font-size: 30px;
-  }
+}
 
-  .redes-sociales {
+.redes-sociales {
     text-align: right;
-  }
+}
 
 
-  .textoConFondoNegro {
+.textoConFondoNegro {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border-radius: 5px;
+}
+
+.septimo img{
+    
+    width: 8%;
+    display: block;
+    margin-left: 45%;
+    margin-right: 55%;
 }
