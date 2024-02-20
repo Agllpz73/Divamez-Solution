@@ -12,7 +12,6 @@
     <div class="contenedor" style="margin: auto;">
         <nav>
             <ul>
-            
                 
                 <div class="menu">
                     
@@ -151,6 +150,54 @@
             </script>
 
         <br><br>
+        
+    <div class="container-card">
+        
+    <div class="card">
+        <figure>
+            <img src="imagenes/oficina3.jpeg">
+        </figure>
+        <div class="contenido-card">
+            <h3>MISION</h3>
+            <p>Enhance the quality of life for our clients in Minnesota by providing exceptional cleaning services through our commitment professionalism and innovation.</p>
+            
+        </div>
+    </div>
+    <div class="card">
+        <figure>
+            <img src="imagenes/industria.jpeg">
+        </figure>
+        <div class="contenido-card">
+            <h3>VISION</h3>
+            <p>To be the leading company in Minnesota, recognized for our dedication and excellent professionalism showing the well-being of our clients.</p>
+            
+        </div>
+    </div>
+    </div>
+    <div class="container-card2">
+        <div class="card2">
+            <figure>
+                <img src="imagenes/hogar.jpeg">
+            </figure>
+            <div class="contenido-card2">
+                <h3>VALUES</h3>
+                <ul style="background-color: white;">
+                    <li>1. Customer Satisfaction: Provide consistently high-quality cleaning services that exceed customer expectations. Regularly solicit and act upon customer feedback to enhance our services.</li>
+                    <li>2. Professionalism and Training: Invest in ongoing training and development programs for our cleaning staff to ensure they are well-equipped with the latest skills and knowledge. Maintain a professional and courteous demeanor in all interactions with clients.</li>
+                    <li>3. Innovation and Technology: Stay at the forefront of technological advancements in the cleaning industry. Incorporate innovative solutions and technologies to improve efficiency and effectiveness in our cleaning processes.</li>
+                    <li>4. Health and Safety: Prioritize the health and safety for our clients and cleaning staff.
+                        Comply with all relevant health and safety regulations and standards.
+                        By adhering to these principles and objectives, our cleaning company in Minnesota aims to create a lasting impact.</li>
+                </ul>
+                
+            </div>
+        </div>
+    
+
+    </div>
+    
+
+
 
         <div class="sexta" id="section6">
             <p>LOCATIONS</p>
@@ -176,19 +223,24 @@
         <br><br>
        
         <div class="septimo" id="section7">
-            <p style="text-align: center; font-size: 30px;">CONTACT</p>
-            <img src="imagenes/Sec. 7 - Boton Contact.png" alt="">      
+            <p style="text-align: center; font-size: 325%;">CONTACT</p>
+            <div class="icono-contacto">
+                <img src="imagenes/Sec. 7 - Boton Contact.png" alt="">      
+
+            </div>
+            
         </div>
 
         <footer>
             <div class="tabla2" style="text-align: center; width: 100%;">
-                <table  >
+                <table border="1">
                     <tr></tr>
                     <tr>
                       <td style="text-align: center; vertical-align: middle;">
                         <div class="contacto"  style="display: flex; justify-content: space-between; align-items: center;">
                             <div class="info-contacto">
-                              <img src="./imagenes/logoEmpresa2.png" alt="" style="width: 200px; height: auto; z-index: 1000;">
+
+                              <img src="./imagenes/logoEmpresa2.png" alt="" style="width: 50%;">
                               <div>
                               <p>CONTACT INFORMATION</p>
                               <p>St Louis Park,MN 55426.</p>
@@ -220,6 +272,21 @@
                                 </li>
                                 <br>
                                 <li>
+                                    <label for="placeType">Place Type:</label>
+                                    <br>
+                                    <select id="placeType" name="placeType" required>
+                                        <option value="home">Home</option>
+                                        <option value="apartment">Apartment</option>
+                                        <option value="commercial">Commercial </option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <li id="otherType" style="display: none;">
+                                        <label for="otherPlaceType">Specify Other:</label>
+                                        <input type="text" id="otherPlaceType" name="otherPlace">
+                                    </li>
+                                </li>
+                                <br>
+                                <li>
                                     <label for="cleaningType">Cleaning Type:</label>
                                     <br>
                                     <select id="cleaningType" name="cleaningType" required>
@@ -230,26 +297,12 @@
                                         <option value="weekly">Weekly</option>
                                         <option value="biWeekly">Bi-Weekly</option>
                                         <option value="monthly">Monthly</option>
+                                        <option value="oneTime">One Time</option>
                                     </select>
                                 </li>
                                 <br>
-                                <li>
-                                    <label for="placeType">Place Type:</label>
-                                    <br>
-                                    <select id="placeType" name="placeType" required>
-                                        <option value="home">Home</option>
-                                        <option value="smallStablishment">Small Establishment</option>
-                                        <option value="bigStablishment">Big Establishment</option>
-                                        <option value="garden">Garden</option>
-                                        <option value="park">Park</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                    <li id="otherType" style="display: none;">
-                                        <label for="otherPlaceType">Specify Other:</label>
-                                        <input type="text" id="otherPlaceType" name="otherPlace">
-                                    </li>
-                                </li>
-                                <br>
+                                
+                                
                                 <li>
                                     <button type="button" onclick="enviarFormulario()" >Submit Request</button>
                                     <input type="hidden" name="_next" value="divames-solution.com">
@@ -354,6 +407,20 @@
                     <br>
                         </div>
                             
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                  </table>
+           
+                 
+ 
+              
+             
+   
+
+
            
         </footer>
         <p style="text-align: center;">©2024-DIMAVEZ</p>
