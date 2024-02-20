@@ -6,19 +6,49 @@
     
 
 }
+@media screen and (max-width: 480px){
+    #head{
+        height: auto;
+    }
+    #contenedor{
+        width: auto;
+    }
+    #barra_lateral{
+        display:none;
+    }
+}
+@media screen and (max-width: 980px){
+    #contenedor{
+        width: 90%;
+    }
+    body{
+        margin: auto;
+        list-style-type: none;
+        overflow: auto;
+        margin-left: auto;
+        padding: 0;
+        position: static;
+    }
+    #lu{
+        margin:auto;
+    }
+}
 body{
     font-family: Yu Gothic;
 }
 nav{
+    margin:auto;
     width: 100%;
     height: 15vh;
     position: fixed;
     z-index: 999;
 }
 ul {
+
     list-style-type: none;
     background-color: #c58b93;
     overflow: auto;
+    background-size: 20px;
     margin: 0;
     padding: 1;
     
@@ -58,13 +88,14 @@ img:hover {
     text-align: center;
     width: 100vw;
     height: 100vh;
-   
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url(/imagenes/fondo-transformed\ \(1\).jpeg);
-    
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
