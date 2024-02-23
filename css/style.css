@@ -33,6 +33,14 @@
         margin:auto;
     }
 }
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
 body{
     font-family: Yu Gothic;
 }
@@ -341,4 +349,114 @@ footer {
     display: block;
     margin-left: 45%;
     margin-right: 55%;
+}
+
+.icono-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Opcional: ajusta la altura de acuerdo a tus necesidades */
+}
+.icono-contacto img{
+    max-width: 5%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Para mantener la proporción de aspecto */
+    background-color: #c58b93;
+
+} 
+
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 50%;
+	margin: auto;
+}
+.container-card2{
+    width: 50%;
+	display: flex;
+	max-width: 50%;
+	margin: auto;
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card2{
+    width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card2:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-5%);
+}
+.card img{
+	width: 100%;
+	height: auto;
+}
+.card2 img{
+    width: 100%;
+	height: auto;
+}
+
+.card .contenido-card{
+	padding: 5%;
+	text-align: center;
+}
+
+.card2 .contenido-card2{
+    padding: 5%;
+	text-align: center;
+
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #7a7a7a;
+}
+.card .contenido-card2 h3{
+    margin-bottom: 15px;
+	color: #7a7a7a;
+}
+
+
+.card .contenido-card p{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid #c58b93;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+
+.card2 .contenido-card2 ul{
+    display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid #c58b93;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #2fb4cc;
+	color: #fff;
 }
