@@ -1,3 +1,11 @@
+const express = require('express')
+const app = express()
+
+
+app.get('/redirect', (req, res) => {
+    res.redirect('https://dimavez-solutions.com/sentMessage.html');
+})
+
 // Dirección a geocodificar
 const address = "Brooklyn Center, Minnesota 55443";
 
