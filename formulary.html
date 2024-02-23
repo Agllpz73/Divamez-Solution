@@ -1,0 +1,71 @@
+<!-- form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dimavez Solution</title>
+   <link href="./css/estilos.css" rel='stylesheet'/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <h1>Cleaning Service Request</h1>
+
+    
+    <form id="contactForm" action="https://formsubmit.co/lopezdiaz1bm@gmail.com" method="post">
+        <ul style="list-style-type: none; padding: 0;">
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </li>
+            <li>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </li>
+            <li>
+                <label>Cleaning Type:</label>
+                <br>
+                <input type="radio" id="deepCleaning" name="cleaningType" value="deepCleaning"><label for="deepCleaning">Deep Cleaning</label><br>
+                <input type="radio" id="moveInOut" name="cleaningType" value="moveInOut"><label for="moveInOut">Move In/Move Out</label><br>
+                <input type="radio" id="basicCleaning" name="cleaningType" value="basicCleaning"><label for="basicCleaning">Basic Cleaning</label><br>
+                <input type="radio" id="daily" name="cleaningType" value="daily"><label for="daily">Daily</label><br>
+                <input type="radio" id="weekly" name="cleaningType" value="weekly"><label for="weekly">Weekly</label><br>
+                <input type="radio" id="biWeekly" name="cleaningType" value="biWeekly"><label for="biWeekly">Bi-Weekly</label><br>
+                <input type="radio" id="monthly" name="cleaningType" value="monthly"><label for="monthly">Monthly</label><br>
+            </li>
+            <li>
+                <label for="placeType">Place Type:</label>
+                <br>
+                <select id="placeType" name="placeType" required>
+                    <option value="home">Home</option>
+                    <option value="smallStablishment">Small Establishment</option>
+                    <option value="bigStablishment">Big Establishment</option>
+                    <option value="garden">Garden</option>
+                    <option value="park">Park</option>
+                    <option value="other">Other</option>
+                </select>
+            </li>
+            <li id="otherType" style="display: none;">
+                <label for="otherPlaceType">Specify Other:</label>
+                <input type="text" id="otherPlaceType" name="otherPlace">
+            </li>
+        </ul>
+
+        <input type="submit"  value="Submit Request">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
+        <input type="hidden" name= "_captcha" value="false">
+    </form>
+
+</body>
+</html>
+
+
+
+

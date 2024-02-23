@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dimavez Solution</title>
+   <link href="./css/estilos.css" rel='stylesheet'/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+    <h1>Cleaning Service Request</h1>
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <form id="contactForm" action="https://formsubmit.co/dimavez.solutions@outlook.com" method="post" style="z-index: 1;">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </li>
+                <br>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </li>
+                <br>
+                <li>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </li>
+                <br>
+                <li>
+                    <label for="cleaningType">Cleaning Type:</label>
+                    <br>
+                    <select id="cleaningType" name="cleaningType" required>
+                        <option value="deepCleaning">Deep Cleaning</option>
+                        <option value="moveInOut">Move In/Move Out</option>
+                        <option value="basicCleaning">Basic Cleaning</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="biWeekly">Bi-Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </li>
+                <br>
+                <li>
+                    <label for="placeType">Place Type:</label>
+                    <br>
+                    <select id="placeType" name="placeType" required>
+                        <option value="home">Home</option>
+                        <option value="smallStablishment">Small Establishment</option>
+                        <option value="bigStablishment">Big Establishment</option>
+                        <option value="garden">Garden</option>
+                        <option value="park">Park</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <li id="otherType" style="display: none;">
+                        <label for="otherPlaceType">Specify Other:</label>
+                        <input type="text" id="otherPlaceType" name="otherPlace">
+                    </li>
+                </li>
+                <br>
+                <li>
+                    <input type="submit"  value="Submit Request">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulary.html">
+                    <input type="hidden" name= "_captcha" value="false">
+                </li>
+            </ul>
+        </form>
+
+    </div>
+     
+</body>
+</html>

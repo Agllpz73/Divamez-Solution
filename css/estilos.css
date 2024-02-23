@@ -81,14 +81,15 @@ li a:hover {
 }
 
 .parrafoCarrousel {
+    font-family: 'Roboto', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 2; 
+    bottom: 0; 
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .itemCarrouselArrows {
@@ -143,4 +144,65 @@ li a:hover {
 
 .itemCarrouselArrows > a > i {
     color: white;
+}
+
+.objetivos1  p{
+    font-family: Yu Gothic;
+    margin: 10px 10px 0px 10px;
+    font-size: larger;
+    margin-top: auto;
+}
+
+.objetivos2 p{
+    font-family: Yu Gothic;
+    font-size: large;
+    margin: 0px 0px 0px 30px;
+    margin-top: auto;
+}
+
+.main-content {
+    margin-top: 400px;
+    padding-top: 20px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+ }
+
+ .image-container img {
+    background-color: white;
+    width: 25%;
+    height: auto;
+    margin-right: 15px;
+ }
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../imagenes/Logo1.png") no-repeat center center;
+    background-size: contain;
+    height: 150px; 
+    background-color: #333;
+}
+
+.logo-nav {
+    display: none; /* Oculta el contenedor de la imagen real */
+}
+
+.formulary{
+ background-color: white;
+}
+
+.comentario{
+    background-color: #c58b93;
+    margin-top: auto;
 }
