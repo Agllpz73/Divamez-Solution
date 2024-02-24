@@ -77,3 +77,20 @@
 	}
 }
 /*Fin-Cards*/
+#map {
+	position: relative;
+	width: 600px; /* Ancho del mapa */
+	height: 400px; /* Altura del mapa */
+	background-image: url('ruta/imagen-de-mapa.jpg'); /* Ruta a tu imagen de mapa */
+	background-size: cover;
+	background-position: center;
+  }
+
+  .pin {
+	position: absolute;
+	width: 30px; /* Ancho del pin */
+	height: 30px; /* Altura del pin */
+	background-color: red; /* Color del pin */
+	border-radius: 50%;
+	cursor: pointer;
+  }

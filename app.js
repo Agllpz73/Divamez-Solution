@@ -1,8 +1,8 @@
 // Dirección a geocodificar
-const address = "Brooklyn Center, Minnesota 55443";
+const address = "St Louis Park,MN 55426";
 
 // Configuración del mapa
-const map = L.map('map').setView([0, 0], 12);
+const map = L.map('map').setView([0, 0], 11);
 
 // Capa de mapa base de OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -15,9 +15,10 @@ const geocodeURL = `https://nominatim.openstreetmap.org/search?format=json&q=${e
 fetch(geocodeURL)
   .then(response => response.json())
   .then(data => {
+    
     if (data.length > 0) {
       const { lat, lon } = data[0];
-      map.setView([lat, lon], 12);
+      map.setView([lat, lon], 11);
 
       // Marcador en la ubicación geocodificada
       const marker = L.marker([lat, lon]).addTo(map);
