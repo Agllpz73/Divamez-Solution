@@ -25,7 +25,7 @@ ul {
 }
 
 
-img:hover {
+.menu img:hover {
     background-color: #c06c77;
 }
 .menu img{
@@ -40,6 +40,9 @@ img:hover {
     float: right;
 }
 
+.redes-Sociales img:hover{
+    background-color: #c06c77;
+}
 
 .segunda img{
     float: left;
@@ -319,9 +322,10 @@ footer {
 	margin: auto;
 }
 .container-card2{
-    width: 40%;
+    width: 30%;
 	display: flex;
-	max-width: 50%;
+	max-width: 70%;
+    
 	margin: auto;
 }
 .card{
