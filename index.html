@@ -308,7 +308,7 @@
                                 
                                 <li>
                                     <button style="border: 3px solid #fff;" type="button" onclick="enviarFormulario()" >Submit Request</button>
-                                    <input type="hidden" name="_next" value="divamez-solution.com">
+                                    <input type="hidden" name="_next"value="https://dimavez-solutions.com/sentMessage.html">
                                 </li>
                             </ul>
                         </form>
@@ -356,6 +356,7 @@
                             <label for="comment">Comment:</label><br>
                             <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
                             <button style="border: 3px solid #fff;" type="submit" id="submitButton">Submit Comment</button>
+                            <input type="hidden" name="_next"value="https://dimavez-solutions.com/sentMessage.html">
                         </form>
                     </div>
                     
@@ -370,7 +371,7 @@
                             var timestamp = moment().format();
                     
                             // Llama a la función para agregar el comentario
-                            agregarComentario(author, comment, timestamp);
+                            //agregarComentario(author, comment, timestamp);
                     
                             // Envía el formulario por correo electrónico
                             enviarCorreo(author, comment);
@@ -417,30 +418,79 @@
                   </table>
            
         </footer>
+        
         <p style="text-align: center;">©2024-DIMAVEZ</p>
 
      </div>
+     
     <script>
                                 function enviarFormulario(){
+                                    window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                     var formData = new FormData(document.getElementById('contactForm'));
                                     fetch('https://formspree.io/f/mdoqelqy',{
                                         method: 'POST',
                                         body: formData
                                     }).then(response =>{
+                                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                         if(! response){
                                             throw new Error('Error at the moment to send the formulary')
                                         }else{
                                             const res = response.text()
-                                            return{
-                                                res
-                                            }
+                                            window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                         }
                                     }).then( data =>{
+                                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                         console.log("Code 200, the email was send ",data)
                                     })
                                 }
                     
                             </script>
+    <script>
+     document.getElementById('commentForm').addEventListener('submit', function(event) {
+                            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+                    
+                            // Obtén los datos del formulario
+                            var author = document.getElementById('author').value;
+                            var comment = document.getElementById('comment').value;
+                            var timestamp = moment().format();
+                    
+                            // Llama a la función para agregar el comentario
+                            //agregarComentario(author, comment, timestamp);
+                    
+                            // Envía el formulario por correo electrónico
+                            enviarCorreo(author, comment);
+                        });
+                    
+    function enviarCorreo(author, comment) {
+                                    window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                                    // Datos del formulario para enviar por correo a Formspree
+                                    var formData = new FormData();
+                                    formData.append('author', author);
+                                    formData.append('comment', comment);
+                            
+                                    // Realiza una solicitud POST a Formspree para enviar el formulario por correo electrónico
+                                    fetch('https://formspree.io/f/mdoqelqy', {
+                                        method: 'POST',
+                                        body: formData,
+                                        headers: {
+                                            'Accept': 'application/json'
+                                        }
+                                    })
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            throw new Error('Error al enviar el formulario');
+                                        }
+                                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                                        console.log('Formulario enviado con éxito');
+                                        // Aquí podrías mostrar un mensaje de éxito al usuario si lo deseas
+                                    })
+                                    .catch(error => {
+                                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                                        console.error('Error al enviar el formulario:', error);
+                                        // Maneja el error de alguna manera (por ejemplo, muestra un mensaje al usuario)
+                                    });
+                                }
+                    </script>
 
 <!--Developed by Angel Esaú López & Julio Haro From México-->
        

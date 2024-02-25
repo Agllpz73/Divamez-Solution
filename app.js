@@ -1,10 +1,7 @@
-const express = require('express')
-const app = express();
+
 
 // Configurar redirección
-app.get('/redirect', (req, res) => {
-    res.redirect('https://dimavez-solutions.com/sentMessage.html');
-});
+
 
 // Dirección a geocodificar
 const address = "St Louis Park,MN 55426";
@@ -40,3 +37,4 @@ fetch(geocodeURL)
   .catch(error => {
     console.error("Error al realizar la geocodificación:", error);
   });
+  
