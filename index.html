@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body >
-    <div class="contenedor" style="margin: auto;">
+    <div class="contenedor" style="justify-content: center; margin-left: 0;margin-right: 0; position: absolute; padding:0;">
         <nav>
             <ul>
                 
@@ -37,12 +37,11 @@
                
             </ul>
         </nav>
-        
-        <br><br><br><br><br>
+        <br><br>
     
-        <div class="tercero" id="section2">
+        <div class="tercero" id="section2" style="border:auto; padding: auto; margin:auto; position: relative; width: auto;">
            <div class="wrap">
-            <div class="text" style="color: whitesmoke; font-family: Yu Gothic; background-color:  rgba(0, 0, 0, 0.1);">
+            <div class="text" style="color: whitesmoke; font-family: Yu Gothic; background-color:  rgba(0, 0, 0, 0.1); font-size: 500%;">
                 
             <p>SAINT PAUL & MINNEAPOLIS</p>
             <p>COMMERCIAL RESIDENTIAL</p>
@@ -178,7 +177,7 @@
     <div class="container-card2">
         <div class="card2">
             <figure>
-                <img src="imagenes/Icono Values.jpg" alt="">
+                <img src="imagenes/Icono Values.jpg" alt="" style="background-size: 30%;">
             </figure>
             <div class="contenido-card2">
                 <h3>VALUES</h3>
@@ -235,9 +234,9 @@
         </div>
 
         <!--Agregamos bordes a la separación de cada formulario-->
-        <footer>
-            <div class="tabla2" style="text-align: center; width: 100%;">
-                <table border="1">
+        <footer >
+            <div class="tabla2" style="text-align: center; width: auto;">
+                <table border="0">
                     <tr></tr>
                     <tr>
                       <td style="text-align: center; vertical-align: middle;">
@@ -309,7 +308,7 @@
                                 
                                 <li>
                                     <button style="border: 3px solid #fff;" type="button" onclick="enviarFormulario()" >Submit Request</button>
-                                    <input type="hidden" name="_next" value="divames-solution.com">
+                                    <input type="hidden" name="_next" value="divamez-solution.com">
                                 </li>
                             </ul>
                         </form>
@@ -318,38 +317,36 @@
                                 
                                 
                 </div>
-
+                <script>
+                    function enviarFormulario(){
+                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                        var formData = new FormData(document.getElementById('contactForm'));
+                        fetch('https://formspree.io/f/mdoqelqy',{
+                            method: 'POST',
+                            body: formData
+                        }).then(response =>{
+                            window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                            if(! response){
+                                throw new Error('Error at the moment to send the formulary')
+                            }else{
+                                window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                                const res = response.text()
+                            }
+                        }).then( data =>{
+                            console.log("Code 200, the email was send ",data)
+                            window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
+                        })
+                    }
+        
+                </script>
 
 
                     </td>
-                        <td >
-                            
-                           
+                        <td style="width:80%">
                             
                             
-                            <script>
-                                function enviarFormulario(){
-                                    var formData = new FormData(document.getElementById('contactForm'));
-                                    fetch('https://formspree.io/f/mdoqelqy',{
-                                        method: 'POST',
-                                        body: formData
-                                    }).then(response =>{
-                                        if(! response){
-                                            throw new Error('Error at the moment to send the formulary')
-                                        }else{
-                                            const res = response.text()
-                                            return{
-                                                res
-                                            }
-                                        }
-                                    }).then( data =>{
-                                        console.log("Code 200, the email was send ",data)
-                                    })
-                                }
-                    
-                            </script>
                      <!-- Aquí empieza el "Déjanos un comentario"-->
-                     <div class="comments" id="comentario" >
+                     <div class="comments" id="comentario" style="width: 80%">
                         <form id="commentForm">
                             <br>
                             <p style="font-size: x-large;">LET US KNOW YOUR EXPERIENCE WITH US</p>
@@ -382,6 +379,7 @@
                       
                             
                                 function enviarCorreo(author, comment) {
+                                    window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                     // Datos del formulario para enviar por correo a Formspree
                                     var formData = new FormData();
                                     formData.append('author', author);
@@ -399,38 +397,50 @@
                                         if (!response.ok) {
                                             throw new Error('Error al enviar el formulario');
                                         }
+                                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                         console.log('Formulario enviado con éxito');
                                         // Aquí podrías mostrar un mensaje de éxito al usuario si lo deseas
                                     })
                                     .catch(error => {
+                                        window.location.href = 'https://www.dimavez-solutions.com/sentMessage.html';
                                         console.error('Error al enviar el formulario:', error);
                                         // Maneja el error de alguna manera (por ejemplo, muestra un mensaje al usuario)
                                     });
                                 }
                     </script>
                     <br>
+                </td>
                         </div>
-                            
-                            
-                            
-                            
-                        </td>
+
+                        
                     </tr>
                   </table>
-           
-                 
- 
-              
-             
-   
-
-
            
         </footer>
         <p style="text-align: center;">©2024-DIMAVEZ</p>
 
      </div>
-    
+    <script>
+                                function enviarFormulario(){
+                                    var formData = new FormData(document.getElementById('contactForm'));
+                                    fetch('https://formspree.io/f/mdoqelqy',{
+                                        method: 'POST',
+                                        body: formData
+                                    }).then(response =>{
+                                        if(! response){
+                                            throw new Error('Error at the moment to send the formulary')
+                                        }else{
+                                            const res = response.text()
+                                            return{
+                                                res
+                                            }
+                                        }
+                                    }).then( data =>{
+                                        console.log("Code 200, the email was send ",data)
+                                    })
+                                }
+                    
+                            </script>
 
 <!--Developed by Angel Esaú López & Julio Haro From México-->
        
